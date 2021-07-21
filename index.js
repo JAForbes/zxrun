@@ -1,10 +1,12 @@
 #! /usr/bin/env node
 import * as P from 'path'
 import * as FS from 'fs'
+import * as M from 'module'
 import minimist from 'minimist'
 import {} from 'zx'
 
 const argv = minimist(process.argv.slice(2))
+const pkg = M.createRequire(import.meta.url)('./package.json')
 
 async function main(){
     const entryFilePaths = [P.resolve(process.cwd(), 'run.js'), P.resolve(process.cwd(), 'run.mjs')]
@@ -44,7 +46,13 @@ async function main(){
     let help = `
         zxrun [zxrun options] [commands] [options]
 
+        [${pkg.version}]
+
         [zxrun options]
+
+        --help      Logs this help message
+        
+        --version   Logs the current zxrun version
 
         --verbose   By default all commands and internal logs are logged silent.
                     You can disable this behaviour via --verbose.
@@ -71,6 +79,10 @@ async function main(){
 
     let f = argv._.shift()
 
+    if (argv.version){
+        console.log(pkg.version)
+        process.exit(1)
+    }
     if (!f || argv.help || argv.h) {
         console.log(help)
         process.exit()
