@@ -40,7 +40,7 @@ async function main(){
         console.error('In order to execute functions from zxrun they must be exported.')
         process.exit(1)
     }
-    
+
     let help = `
         zxrun [zxrun options] [commands] [options]
 
@@ -86,6 +86,7 @@ async function main(){
         await module[f](argv)
     } catch (e) {
         console.error('An error occurred while running',f)
+        console.error(e.message)
         console.error(e.stack)
         process.exit(1)
     }
