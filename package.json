@@ -1,0 +1,21 @@
+{
+  "name": "zxrun",
+  "version": "0.0.0",
+  "main": "index.js",
+  "module": "index.js",
+  "bin": "./index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "JAForbes",
+  "license": "MIT",
+  "dependencies": {
+    "minimist": "^1.2.5",
+    "zx": "^2.0.0"
+  },
+  "description": "",
+  "devDependencies": {
+    "eslint": "^7.31.0"
+  }
+}
