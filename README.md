@@ -4,7 +4,7 @@
 
 I've written before that I think npm scripts [could be better](https://james-forbes.com/#!/posts/alternative-to-npm-scripts).
 
-Recently I've been experimenting a lot with [google/zx](https://github.com/google/zx) and I'm now of the believe JS is the best scripting language ever, we just needed a tiny bit of sugar.
+Recently I've been experimenting a lot with [google/zx](https://github.com/google/zx) and I'm now of the belief that JS is the best scripting language ever, we just needed a tiny bit of sugar.
 
 I've since made a few equally experimental but already useful packages:
 
@@ -12,7 +12,7 @@ I've since made a few equally experimental but already useful packages:
 - [pgzx](https://github.com/JAForbes/pgzx) an extension to zx that preconfigures a postgres.js instance for easy scripting against a database
 - [bank](https://github.com/JAForbes/bank) an importer of banking csv files into a nice postgres schema for easy querying, it uses zxrun, zx and pgmg.
 
-zxrun takes my run script idea and does it in JS.
+zxrun takes my [run script idea]((https://james-forbes.com/#!/posts/alternative-to-npm-scripts)) and does it in JS.
 
 You make a file named `run.js` that exports some functions.  
 
@@ -45,4 +45,4 @@ If you dont pass any functions, you get an auto generated help output showing yo
 
 ---
 
-I want to add a bunch of other useful features like tab completion, surfacing documentation from functions to the help, error checking for missing required arguments.  But it's already great.
+I want to add a bunch of other useful features like tab completion, surfacing documentation from functions to the help, error checking for missing required arguments.  But it's already great.  This is early days... see you soon!
