@@ -1,6 +1,7 @@
-# zxrun
 
-> 👋 This is very experimental please do not use this 🚨
+> 🚨🚨🚨 I've archived this repo.  It was a useful experiment but I think there's a better way to use zx in this manner that is more of a usage pattern than a library.  I plan to write about it at some point.
+
+# zxrun
 
 I've written before that I think npm scripts [could be better](https://james-forbes.com/#!/posts/alternative-to-npm-scripts).
 
